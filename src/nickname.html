@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple nickname generator application">
+    <meta name="keywords" content="nickname, generator, random">
+
+     <!-- Title -->
+    <title>Nickname Generator</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/app_style.css">
+</head>
+<body>
+    <!-- Container del generatore -->
+    <div class="container">
+        <!-- Titolo in H1-->
+        <h1>Nickname Generator</h1>
+        <label for="nickname" class="label">Generated Nickname</label>
+        <!-- output per vedere il nickname generato -->
+        <div class="nickname-field">
+            <input type="text" id="nickname" class="nickname-input" readonly aria-labelledby="nickname">
+        </div>
+        <!-- opzioni -->
+        <label for="options" class="label">Options</label>
+        <!-- switch per aggiungere un numero random alla fine del nome -->
+        <div id="options" class="options">
+            <div class="option">
+                <label class="switch">
+                    <input type="checkbox" id="addNumber">
+                    <span class="slider round"></span>
+                </label>
+                Add Random Number
+            </div>
+        </div>
+        <!-- bottone per generare il nickname -->
+        <button id="generate" class="generate-button">Generate Nickname</button>
+    </div>
+    <!-- JS -->
+    <script src="scripts/app.js"></script>
+</body>
+</html>

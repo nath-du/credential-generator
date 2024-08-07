@@ -1,0 +1,44 @@
+/* Sezione per la selezione del generatore */
+.generator-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.generator-option {
+    background-color: var(--dark-blue2);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px var(--black-1);
+}
+
+.generator-link {
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--font-family-base);
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.generator-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.generator-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.generator-option:hover {
+    background-color: var(--el-blue-1);
+}
+
+.generator-option:hover .generator-link {
+    color: var(--white);
+}

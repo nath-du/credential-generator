@@ -1,0 +1,205 @@
+/* Variables */
+:root {
+    --font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --font-orbitron-bold: 'Orbitron-Bold', sans-serif;
+    --font-orbitron-light: 'Orbitron-Light', sans-serif;
+    --white: #fff;
+    --dark-blue1: #05102E;
+    --dark-blue2: #0A1741;
+    --el-blue-1: #007bff;
+    --el-blue-2: #0056b3;
+    --cyan-1: #58c6ce;
+    --black-1: rgba(0, 0, 0, 0.3);
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Orbitron-Bold';
+    src: url('/fonts/Orbitron-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Orbitron-Light';
+    src: url('/fonts/Orbitron-Light.ttf') format('truetype');
+}
+
+/* Body */
+body {
+    font-family: var(--font-family-base);
+    background-image: url(../imgs/background.jpg);
+    background-size: 100%;
+    color: var(--white);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: var(--font-orbitron-bold);
+}
+
+.label {
+    color: rgb(92, 92, 92);
+    font-size: 12px;
+    font-family: var(--font-orbitron-light);
+}
+
+/* Container */
+.container {
+    background-color: var(--dark-blue1);
+    padding: 70px;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 450px;
+    box-shadow: 0 4px 8px var(--black-1);
+}
+
+/* Output della password */
+.password-field {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.password-input {
+    background-color: var(--dark-blue2);
+    border: none;
+    color: var(--white);
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px;
+    font-family: var(--font-family-base);
+    font-size: 1.2em;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* slider per selezionare la lunghezza della password */
+.length-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#length {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+#length-value {
+    min-width: 40px;
+    text-align: center;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+.option {
+    margin-bottom: 10px;
+    background-color: var(--dark-blue2);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Slide buttons per le impostazioni di come deve generare la password */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--white);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--el-blue-1);
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Bottone per generare la password */
+.generate-button {
+    background-color: var(--el-blue-1);
+    border: none;
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.generate-button:hover {
+    background-color: var(--el-blue-2);
+}
+
+/* Nickname Field (nicknames_gen.html) */
+.nickname-field {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.nickname-input {
+    background-color: var(--dark-blue2);
+    border: none;
+    color: var(--white);
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px;
+    font-family: var(--font-family-base);
+    font-size: 1.2em;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+    .length-slider {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #length {
+        margin-bottom: 10px;
+    }
+    body {
+        background-image: none;
+    }
+}
