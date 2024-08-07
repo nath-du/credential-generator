@@ -3,7 +3,8 @@
     --font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     --font-orbitron-bold: 'Orbitron-Bold', sans-serif;
     --font-orbitron-light: 'Orbitron-Light', sans-serif;
-    --white: #fff;
+    --white1: #fff;
+    --white2: #ececec;
     --dark-blue1: #05102E;
     --dark-blue2: #0A1741;
     --el-blue-1: #007bff;
@@ -28,7 +29,7 @@ body {
     font-family: var(--font-family-base);
     background-image: url(../imgs/background.jpg);
     background-size: 100%;
-    color: var(--white);
+    color: var(--white1);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -65,7 +66,7 @@ h1 {
 .password-input {
     background-color: var(--dark-blue2);
     border: none;
-    color: var(--white);
+    color: var(--white1);
     border-radius: 3px;
     width: 100%;
     padding: 10px;
@@ -127,7 +128,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--white);
+    background-color: var(--white1);
     transition: .4s;
     border-radius: 20px;
 }
@@ -139,7 +140,7 @@ h1 {
     width: 14px;
     left: 3px;
     bottom: 3px;
-    background-color: var(--white);
+    background-color: var(--dark-blue1); 
     transition: .4s;
     border-radius: 50%;
 }
@@ -156,7 +157,7 @@ input:checked + .slider:before {
 .generate-button {
     background-color: var(--el-blue-1);
     border: none;
-    color: var(--white);
+    color: var(--white1);
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 1em;
@@ -176,7 +177,7 @@ input:checked + .slider:before {
 .nickname-input {
     background-color: var(--dark-blue2);
     border: none;
-    color: var(--white);
+    color: var(--white1);
     border-radius: 3px;
     width: 100%;
     padding: 10px;
@@ -189,8 +190,14 @@ input:checked + .slider:before {
 
 /* Mobile */
 @media (max-width: 600px) {
+    /* Body */
+    body {
+        background-color: var(--dark-blue1);
+        background-image: none;
+    }
     .container {
         width: 100%;
+        box-shadow: none;
     }
     .length-slider {
         flex-direction: column;
@@ -198,8 +205,5 @@ input:checked + .slider:before {
     }
     #length {
         margin-bottom: 10px;
-    }
-    body {
-        background-image: none;
     }
 }
