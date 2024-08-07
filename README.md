@@ -1,1 +1,1 @@
-# credential-generator
+# Credential Generator
